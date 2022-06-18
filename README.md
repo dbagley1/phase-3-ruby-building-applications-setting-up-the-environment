@@ -41,15 +41,15 @@ Sticking to conventions, a run file has already been created in this example,
 ```ruby
 #!/usr/bin/env ruby
 
-require_relative '../lib/garden'
-require_relative '../lib/plant'
+require_relative "../lib/garden"
+require_relative "../lib/plant"
 
-lawn = Garden.new(name: 'Front Lawn')
+lawn = Garden.new(name: "Front Lawn")
 
-basil = Plant.new(name: 'Basil')
+basil = Plant.new(name: "Basil")
 basil.garden = lawn
 
-cucumber = Plant.new(name: 'Cucumber')
+cucumber = Plant.new(name: "Cucumber")
 cucumber.garden = lawn
 
 p lawn.plants
@@ -84,20 +84,20 @@ typically need to load up any necessary files. We can see this in
 both our local files located in `lib`:
 
 ```ruby
-require_relative '../lib/garden'
-require_relative '../lib/plant'
+require_relative "../lib/garden"
+require_relative "../lib/plant"
 ```
 
 With `Garden` and `Plant` loaded, we can proceed to run our very simple
 application — relating a few `Plant` instances to a `Garden` instance.
 
 ```ruby
-lawn = Garden.new(name: 'Front Lawn')
+lawn = Garden.new(name: "Front Lawn")
 
-basil = Plant.new(name: 'Basil')
+basil = Plant.new(name: "Basil")
 basil.garden = lawn
 
-cucumber = Plant.new(name: 'Cucumber')
+cucumber = Plant.new(name: "Cucumber")
 cucumber.garden = lawn
 
 p lawn.plants
@@ -137,8 +137,8 @@ requiring `config/environment.rb` in our run file.
 For `config/environment.rb`, that would be:
 
 ```ruby
-require_relative '../lib/garden'
-require_relative '../lib/plant'
+require_relative "../lib/garden"
+require_relative "../lib/plant"
 ```
 
 And for `bin/run`:
@@ -146,14 +146,14 @@ And for `bin/run`:
 ```ruby
 #!/usr/bin/env ruby
 
-require_relative '../config/environment'
+require_relative "../config/environment"
 
-lawn = Garden.new(name: 'Front Lawn')
+lawn = Garden.new(name: "Front Lawn")
 
-basil = Plant.new(name: 'Basil')
+basil = Plant.new(name: "Basil")
 basil.garden = lawn
 
-cucumber = Plant.new(name: 'Cucumber')
+cucumber = Plant.new(name: "Cucumber")
 cucumber.garden = lawn
 
 p lawn.plants
